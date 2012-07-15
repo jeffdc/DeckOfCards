@@ -9,7 +9,9 @@ import java.util.Random;
 /**
  * A simple implementation of a Deck of 52 poker-style playing cards. 
  * 
- * N.B. - This class is not thread-safe and should not be used in a concurrent way.
+ * N.B. - This class is not thread-safe and should not be used in a concurrent way. Further the class is declared as
+ * final to prevent subclassing. This was done since all the complexities of a providing a safe super class were not
+ * taken into account and thus the class is not designed for subclassing.
 **/	
 public final class Deck
 {
@@ -79,7 +81,7 @@ public final class Deck
 	
 	/**
      * Compares two cards based solely on Rank. Whether or not the aces are treated as high card or low card is
-     * determined by how the card was created via the static factory. 
+     * determined by how the deck was created. 
      * @return An int value with identical semantics to the Comparable interface.
      */
 	public int compareCards(Card first, Card second) {
