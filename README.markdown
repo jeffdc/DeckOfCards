@@ -9,4 +9,5 @@ I played around a bit with writing some Specification based tests using Specs2. 
 * Download and install Specs2 https://github.com/etorreborre/specs2
 * Change to the directory where you cloned this (DeckOfCards) repository
 * Then run:
+
         > sbt clean compile test
