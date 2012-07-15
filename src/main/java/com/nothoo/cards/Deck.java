@@ -85,6 +85,8 @@ public final class Deck
      * @return An int value with identical semantics to the Comparable interface.
      */
 	public int compareCards(Card first, Card second) {
+		// if acesHigh is set then we use the value stored with the enum Card.Rank to do the comparison
+		// else we just use the enums natural ordering
 		return acesHigh ? (first.getRank().value() - second.getRank().value()) : 
 						   first.getRank().compareTo(second.getRank());
 	}
