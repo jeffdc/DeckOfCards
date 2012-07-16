@@ -89,8 +89,11 @@ public class TestDeck {
 		Card queenOfHearts = Card.valueOf(Card.Suite.HEARTS, Card.Rank.QUEEN);
 		
 		assertTrue(deck.compareCards(aceOfSpades, queenOfHearts) < 0);
+		assertTrue(deckAcesHigh.compareCards(aceOfSpades, queenOfHearts) > 0);
 		assertTrue(deck.compareCards(queenOfHearts, aceOfSpades) > 0);
+		assertTrue(deckAcesHigh.compareCards(queenOfHearts, aceOfSpades) < 0);
 		assertTrue(deck.compareCards(aceOfSpades, aceOfSpades) == 0);
+		assertTrue(deckAcesHigh.compareCards(aceOfSpades, aceOfSpades) == 0);
 	}
 	
 	private void dealToExhaustion(Deck deck) {
